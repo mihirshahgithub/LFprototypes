@@ -2,6 +2,8 @@
 
 In this example we are going to walk through the process of working on a new prototype and the set of instructions that go with it.<b>The instructions below are used for video recording reasons and are not used within the curriculum or being graded by the instructors.</b>
 
+<b><a href="https://youtu.be/-DF-LV9jdGw" target="_blank">Watch This Video First"</a></b>
+
 ## Overview - How to complete the Prototype
 
 > <h4>Code Setup - <a href="https://github.com/Learning-Fuze/prototypes/tree/example/example#code-setup-details">Details</a></h4>
@@ -139,13 +141,13 @@ In this example we are going to walk through the process of working on a new pro
 
 ##### 5. Watch perfect prototype
 
-> <img src="prefect-prototype-image-and-video-link" width="650" /> 
+> <b><a href="https://youtu.be/-DF-LV9jdGw" target="_blank">Perfect Prototype Video Here</a></b>
+>>  - *This is the same video from above*
+>>  - Once you have completed and submitted your prototype you will gain access to a Perfect Prototype code example, video or both 
 
 ##### 6. Collaborate on feedback 
 
 > Within the Github.com UI another developer or in this case an instructor will review the Pull Request you made - <b>Is your feature working</b>. Collaboration happens through github UI & the notifications are sent through email when comments are added to pull requests
-
-> <img src="collaboration-image" width="650" />
 
 > + Make additional modification based on feedback
 >   + more commits to the same branch
