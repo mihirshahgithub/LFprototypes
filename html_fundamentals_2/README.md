@@ -72,7 +72,7 @@
 	- Create an &lt;h3&gt; tag and add the text "Experience" to it
 	- In the &lt;h3&gt; tag, add a title **attribute**.  title will be the **key**, and add "This is an example title" as the **value**
 	- Add the text "Todo: fill in skills"
-	- Add 3 skills within &lt;p&gt; tags following the h3 element 
+	- Add 3 skills within &lt;p&gt; tags following the &lt;h3&gt; element 
 
 ### Prototype 3
 
