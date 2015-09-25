@@ -1,0 +1,38 @@
+/*index.html styling*/
+h1.about-me{
+    font-size:12px;
+    color:blue;
+}
+body{
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    float: left;
+    position: relative;
+}
+/*Experience.html styling*/
+h1.exp{
+    font-family:montserrat;sans-serif;
+}
+body.bgcolor{
+    background-color:turquoise;
+}
+#experience-list{
+    list-style-type: square;
+}
+/*Skills styling*/
+h1.googlefont{
+    font-family:montserrat;sans-serif;
+}
+ul.nest{
+    color: blue;
+
+/*nav styling*/
+.nav li{
+    list-style-type: none;
+    display: inline;
+    font-size: 20px;
+    margin: 20%;
+}
