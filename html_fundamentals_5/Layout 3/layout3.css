@@ -1,0 +1,16 @@
+body{
+    background-color: aqua;
+    line-height: 150%;
+}
+
+#title{
+    font-weight:bold;
+    height: 15vh;
+    text-align: center;
+    font-size: 25px;
+}
+
+#left-nav{
+    width: 15vw;
+}
+
