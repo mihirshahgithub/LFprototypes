@@ -25,14 +25,108 @@
             color: black;
             text-shadow: 0 0 5px rgba(0,0,0,1);
         }
+        nav li {
+
+            display:inline;
+            width: 50%;
+            position:relative;
+            bottom:150px;
+            left:1000px;
+        }
+
+        #fs2{
+            height:30vh;
+            width:100vw;
+        }
+        #div1{
+            display:inline-block;
+            width:25%;
+            float:left;
+            margin:0;
+            padding:0;
+            border:5px dashed steelblue;
+        }
+        #div2{
+            display:inline-block;
+            width:75%
+            float:right;
+            margin:0;
+            padding:0;
+            border: 5px dotted salmon;
+        }
+        #fs3 {
+            height: 30vh;
+            width: 100vw;
+        }
+        #div3{
+            display:inline-block;
+            width:25%;
+            float:left;
+            margin:0;
+            padding:0;
+            border:5px dashed steelblue;
+        }
+        #div4 {
+            display: inline-block;
+            width: 75% float : right;
+            margin: 0;
+            padding: 0;
+            border: 5px dotted salmon;
+        }
+
+        footer{
+            height:20vh;
+            background-color:teal;
+            position:relative;
+        }
+        #copyright{
+            position:relative;
+            top:100px;
+            left:600px;
+
+        }
+        .container{
+            width:70vw;
+            height:100vh;
+            margin:auto;
+        }
     </style>
 </head>
 <body>
+<div class="container">
 <div class="header">
     <header>
         <img src="http://localhost:8888/lfz//prototypes/css_design_layout_2/images/ebaylogo.png" alt="EBAY LOGO" width="150" height="60">
         <h1>MIHIR SHAH'S COMPANY</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="our_menu">Our Menu</a></li>
+                <li><a href="contact_us">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
+</div>
+<section id="fs2">
+    <div id="div2">
+        <p>I can't wait for the NBA season to start.</p>
+    </div>
+    <div id="div1">
+        <p>I'm not a delusional Lakers fan. I just think we're getting title number 17 this year.</p>
+    </div>
+</section>
+<section id="fs3">
+    <div id="div4">
+        <h2>A Day in the Life at LearningFuze</h2>
+    </div>
+    <div id="div3">
+        <h2>LearningFuze is the premier Southern California web-development bootcamp.</h2>
+    </div>
+</section>
+<footer>
+ <p id="copyright">Copyright Mihir Shah &copy;2015 All Rights Reserved</p>
+</footer>
 </div>
 </body>
 </html>
