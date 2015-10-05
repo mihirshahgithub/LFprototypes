@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #styled{
+            background-color: antiquewhite;
+            font-family: cursive;
+            border: 10px dashed #d42551;
+            -webkit-box-shadow: inset 0 0 10px blue;
+            -moz-box-shadow: inset 0 0 10px blue;
+            box-shadow: inset 0 0 10px blue ;
+        }
+    </style>
+</head>
+<body>
+<div id="styled">
+    <form action="http://learningfuze.com/echo.php" method="get">
+        <input type="text" name="name" placeholder="name"><br>
+        <input type="e-mail" name="e-mail" placeholder="e-mail"><br>
+        <textarea rows="10" columns="10" name="contact"></textarea>
+        <input type="submit" name="submit" value="submit">
+
+    </form>
+</div>
+    <form action="http://learningfuze.com/echo.php" method="get">
+        <label for="enchilada">enchilada</label>
+        <input id="enchilada" type="radio" name="favorite food" checked='checked' value="enchilada">
+        <label for="mexican pizza">mexican pizza</label>
+        <input id="mexican pizza" type="radio" name="favorite food" value="mexican pizza">
+        <label for="Strawberries">Strawberries</label>
+        <input id="strawberries" type="radio" name="favorite food" value="strawberry">
+        <input type="submit"  name="submit" value="submit">
+    </form>
+
+    <br>
+
+    <form action="http://learningfuze.com/echo.php" method="get">
+        <label for="super mario world" >Super Mario World</label>
+        <input id="Super Mario World" type="checkbox" name="game">
+        <label for="NBA JAM">NBA JAM</label>
+        <input id="NBA JAM" type="checkbox" name="game">
+        <label for="NBA 2K16">NBA 2k16</label>
+        <input id="NBA 2K16" type="checkbox" name="game">
+        <label for="Grand Theft Auto">Grand Theft Auto</label>
+        <input id="Grand Theft Auto" type="checkbox" disabled name="game">
+        <input type="submit" name="submit" value="submit">
+    </form>
+    <br>
+    <form action="http://learningfuze.com/echo.php" method="get">
+        <select multiple>
+            <option value="Inception" name="movie">Inception</option>
+            <option value="Hoosiers" name="movie">Hoosiers</option>
+            <option value="Jurassic_Park" name="movie">Jurassic Park</option>
+            <option value="Coach_Carter" name="movie">Coach Carter</option>
+        </select>
+        <input type="submit" name="submit" value="submit">
+
+</form>
+
+</body>
+</html>
