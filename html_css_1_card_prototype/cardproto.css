@@ -16,6 +16,8 @@ body{
     height:32%;
     border: 5px dotted blue;
     position:relative;
+    perspective: 1000px;
+    display:inline-block;
 }
 
 .card_front{
@@ -38,7 +40,7 @@ img{
     height:100%;
 }
 
- .card_container .card_back:hover{
+.card_container .card_back:hover{
     transform:rotateY(180deg);
-     transition-duration: 5s;
+    transition-duration: 1s;
 }
