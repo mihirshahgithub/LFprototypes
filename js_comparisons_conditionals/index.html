@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Comparison and Conditionals</title>
+    <script>
+        var mySmallNumber=5;
+        var myString="5";
+        var myBigNumber=255;
+        /* End of Feature Set 1 */
+        var output1=console.log("myString is " +(mySmallNumber==myString));
+        var output2=console.log("myString is " +(mySmallNumber===myString));
+        var output3=console.log("myBigNumber is " + (mySmallNumber<myBigNumber));
+        var output4=console.log("myBigNumber is " + (mySmallNumber>myBigNumber));
+
+        /* Feature Set 2 Optional Challenge */
+        var challenge=mySmallNumber+myString;
+        var challenge;
+
+        /*Feature Set 3 */
+        var myTruth=true;
+        var myLie=false;
+
+        /*Feature Set 4 */
+        if(myTruth==true){
+            document.write("I'm true!")
+        }
+
+        if(myLie==true){
+            document.write("I'm true")
+        } else{
+            document.write("I'm false")
+        }
+
+        if(myTruth==myLie){
+            document.write("I'm true");
+        } else{
+            document.write("I'm false")
+        }
+
+        if(myLie===false){
+            document.write("I'm a true lie")
+        }
+
+        /* Feature Set 5 */
+        var myNumber=95;
+
+        switch (myNumber){
+            case 1: (console.log("This is not right."));
+                break;
+            case 2:(console.log("This is right."));
+                break;
+            case 3: (console.log("Try again"));
+                break;
+            default:(console.log("Bingo!"));
+                break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
