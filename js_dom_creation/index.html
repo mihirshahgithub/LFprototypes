@@ -2,50 +2,91 @@
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<style>
+	<style>
 
-.playground{
-	margin: 2%;
-	min-height: 50vh;
-}
-.playground_source{
-	background-color: lavender;
-}
-.playground_destination{
-	background-color: lightyellow;
-}
-.awesome_class{
-	text-shadow: 1px 1px red;
-	font-weight: bold;
-}
-.neato{
-	padding: 1%;
-}
-.neato > li{
-	margin: 0px 1%;
-	padding: 0px;
-	list-style-type: none;
-	display: inline-block;
-}
-.awesome_picture{
-	display:inline-block;
-}
-.awesome_picture > figcaption{
-	text-align: center;
-	font-weight: bold;
-	font-style: italic;
-	font-size:120%;
-}
-</style>
+		.playground{
+			margin: 2%;
+			min-height: 50vh;
+		}
+		.playground_source{
+			background-color: lavender;
+		}
+		.playground_destination{
+			background-color: lightyellow;
+		}
+		.awesome_class{
+			text-shadow: 1px 1px red;
+			font-weight: bold;
+		}
+		.neato{
+			padding: 1%;
+		}
+		.neato > li{
+			margin: 0px 1%;
+			padding: 0px;
+			list-style-type: none;
+			display: inline-block;
+		}
+		.awesome_picture{
+			display:inline-block;
+		}
+		.awesome_picture > figcaption{
+			text-align: center;
+			font-weight: bold;
+			font-style: italic;
+			font-size:120%;
+		}
+	</style>
 <script>
-$(document).ready(function()
-{
-	//playground 1 code
 
+$(document).ready(function() {
+	//playground 1 code
+	//confirm all classes and css properties are added
+	//change made from using appendTo to append() and margin error is fixed
+
+	var h1_playground1 = $("<h1>").text("I am a heading");
+	var p1_playground1 = $("<p>").text("This is an awesome paragraph");
+	var p2_playground2 = $("<p>").css("color", "red").text("This has red text.");
+
+	$("#playground1").append(h1_playground1);
+	$("#playground1").append(p1_playground1);
+	$("#playground1").append(p2_playground2);
+
+	//Create variables for HTML Tags. Concatenate the <strong> element into a separate variable
 	//playground 2 code
 
+	var div_awesome_class = $("<div>").addClass("awesome_class").text("Here is some awesome div text");
+	var div_awesome_class_my_awesome_div2 = $("<div>").addClass("awesome_class").attr("id", "my_awesome_div_2").text("Here is MORE awesome div text");
+	var div_awesome_class_my_awesome_div3 = $("<div>").addClass("awesome_class").attr("id", "my_awesome_div_3").attr("data-coolness", "high").text("Here is");
+	var strong = $("<strong>").text(" EVEN MORE ");
+	var text = "awesome div text";
+
+	//Append var strong to div_awesome_class_my_awesome_div3; append all code to destination: #playground2
+	$("#playground2").append(div_awesome_class);
+	$("#playground2").append(div_awesome_class_my_awesome_div2);
+	$("#playground2").append(div_awesome_class_my_awesome_div3);
+	$(div_awesome_class_my_awesome_div3).append(strong).append(text);
+
+
 	//playground 3 code
+	var ul = $("<ul>").addClass("neato");
+	var list1 = $("<li>").text("Link 1");
+	var list2 = $("<li>").text("Link 2");
+	var list3 = $("<li>").text("Link 3");
+	var figure = $("<figure>").addClass("awesome_picture");
+	var image = $("<img>").attr("src", "http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg");
+	var figcaption = $("figcaption").text("That's right ");
+	var span = $("<span>").addClass("bold_text").text(" you are");
+
+	//append the span onto caption; append caption and image onto figure; avoid using appendTo
+
+	$(ul).append(list1).append(list2).append(list3);
+	$("#playground3").append(ul);
+	$(figcaption).append(span);
+	$(figure).append(image).append(figcaption);
+	$("#playground3").append(figure);
 });
+
 </script>
 </head>
 <body>
@@ -61,7 +102,7 @@ $(document).ready(function()
 	<!-- ********** Playground 1 Destination ********** -->
 	<div class="playground playground_destination" id="playground1">
 		<!--copy code into here using jQuery ONLY-->
-		<!-- ******** NO COPY AND PASTE ******** -->
+			<!-- ******** NO COPY AND PASTE ******** -->
 	</div>
 
 <!-- ************** Playground 2 ************** -->	
@@ -79,7 +120,7 @@ $(document).ready(function()
 		</div>
 	</div>
 
-	<!-- ********** Playground 2 destination ********** -->
+
 	<div class="playground playground_destination" id="playground2">
 		<!--copy code into here using jQuery ONLY-->
 		<!-- ******** NO COPY AND PASTE ******** -->
@@ -105,5 +146,5 @@ $(document).ready(function()
 		<!--copy code into here using jQuery ONLY-->
 		<!-- ******** NO COPY AND PASTE ******** -->
 	</div>
-
+</body>
 </html>
