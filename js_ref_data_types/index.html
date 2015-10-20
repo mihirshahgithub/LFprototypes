@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    //Feature Set 1.0
+        var studentArray=["student1","student2","student3","student4","student5"];
+        console.log(studentArray[2]);
+
+     //Feature Set 1.1
+        console.log(studentArray);
+        console.log(studentArray.length);
+        studentArray.push("student6","student7");
+        console.log(studentArray.length);
+        console.log(studentArray);
+
+     //Feature Set 2.0
+        var student={};
+        student.firstName="Mihir";
+        student.lastName="Shah";
+        student.age=29;
+        student.school="Learningfuze";
+        student.questionList=[];
+        student.hasQuestion=false;
+
+console.log(student);
+    //Feature Set 2.1 and 2.2
+       var student_greeting= student.greeting=function(){
+            return "Hello, my name is " + this.firstName;
+        };
+       console.log(student_greeting);
+
+        var about_me=student.aboutMe=function(){
+            return "My full name is " + this.firstName + this.lastName + " , I am " + this.age + " years old and I am a student at " + this.school;
+        };
+        console.log(about_me);
+
+        student.askQuestion=function(question){
+          this.questionList.push(question);
+            student.hasQuestion=true;
+        return "A question has been added to your list";
+        };
+
+        student.answerQuestion=function(){
+            if(student.hasQuestion){
+                student.hasQuestion=false;
+                return this.questionList.lastIndexOf();
+            } else{
+                return "You have no pending questions";
+            }
+        };
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
