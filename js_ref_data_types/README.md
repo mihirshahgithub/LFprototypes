@@ -1,11 +1,11 @@
-# Javascript - DOM Creation
+# Javascript - Reference Data Types
 
 Building from previous prototypes this prototype will introduce you to DOM creation using jQuery.
 
 - Presentations
-    - JS DOM Creation
-        - <a href="https://drive.google.com/a/learningfuze.com/file/d/0B7eOl4joefDualpHYlF6dERaWUk/view" target="_blank">Slides Link</a>
-        - <a href="https://plus.google.com/u/0/hangouts/onair/watch?hid=hoaevent/cpujfhnr3e85i52ijekqghl3egk&ytl=jzQNurWMZr8&wpsrc=yta" target="_blank">Video Link</a>
+    - JS Referemce Data Types
+        - <a href="https://drive.google.com/a/learningfuze.com/file/d/0BwjF2I7CBLDVNTY1ZTBIOWNnbUk/view" target="_blank">Slides Link</a>
+        - <a href="https://plus.google.com/u/1/events/c1tb7su9k3km4jagksjtef09pi0" target="_blank">Video Link</a>
 - Projects
     - This prototype will help build towards more advanced versions of Memory Match project by giving you the tools to dynamically creating the gameboard.
 
@@ -32,44 +32,106 @@ Building from previous prototypes this prototype will introduce you to DOM creat
 > `git pull https://github.com/Learning-Fuze/prototypes.git` & press enter
 > - The command above downloads the newly posted prototypes and saves them to your local machine
 
-> `git checkout -b js_dom_creation`
+> `git checkout -b js_ref_data_types`
 > - Creating this feature groupings allow users to modify code without causing issues with the current functioning code.
 > - Any modifications to these files after <b>branching</b> can be undone
-> - "js_dom_creation" is the branch name.
+> - "js_ref_data_types" is the branch name.
 
 ## Coding Instructions
 
 #### Getting Started
 
->1. An index.html file is included in this prototype
-1. You will be entering your code directly into the index.html file starting on line 44
+>1. Make an index.html inside the `js-ref-data-types` folder
+1. Create a basic HTML DOM structure
+	- DOCTYPE tag
+	- HTML tag
+	- head tag
+	- body tag
+1. Add `script` tags between your `head` tags
 1. **DO NOT** edit this README
 
-#### Feature Set 1 - Review the existing code in `index.html`
+#### Feature Set 1.0 - Student Array
 
->- You will notice there are three main sections
-	- playground 1
-	- playground 2
-	- playground 3
-- Each section contains a `playground_source` div with other elements nested inside
-	- This is what you will be recreating using jQuery
-- Each section also contains a `playground_destination`
-	- This is what you will be appending all of your created elements to for that playground
+>1. Declare an array that has at least 5 student names in it, as strings, name it: `student_array`
+2. Use `console.log()` to print out the third student in your array
+	- Use your array in your `console.log()`
+	- **Example:** `console.log(student_array[?]);` (Replace the question mark with the number you think will get the third student)
 
-#### Feature Set 2 - Building Out Your Playgrounds
+>Open your page in your browser, open your console
 
->- Using jQuery recreate the `playground_source` div with all of it's nested elements
-- Append your newly created `playground_source` div to its corresponding playground destination div
+>Do you see the student?
 
-#### *Hints*
+>##### Feature Set 1.1 - Array Methods 
 
->- Test your code frequently, don't wait till you're done to test your code
-- Always have your console open while testing your code
-- Save and push to gitHub often
-	- Save as often as you can it's simple, quick and will save you a lot of headache
-	- Push to gitHub after each playground is successfully created (at least)
-	- Remember to push to your `js_dom_creation` branch
-- Don't forget to ask for help if you get stuck
+>1. Using another `console.log` log out your student array
+	- **Example:** `console.log(student_array);`
+1. Using the **length** property, log out the length of your array
+1. Using the **push()** method, add two more students to your array
+1. Log out the length of your array again
+1. Finally log out the full array again like you did in step 1.
+
+#### Feature Set 2.0 - Build an object (You down with O.O.P.)
+
+>1. Declare an empty object variable named, `student`
+	- *Hint* - `var student = {}`
+1. Using dot notation add the following 'key: value` pairs to your student object
+	- `firstName` as a string
+	- `lastName` as a string
+	- `age`- as a number
+	- `school` as a string
+	- `questionList` as an array (set to an empty array: `[]`)
+	- `hasQuestion` as a boolean (set to **false**)
+	- *Hint* - `student.firstName = "John";
+
+>##### Feature Set 2.1 - Add methods to the madness  
+
+>1. Add the following four methods to your `student` object
+	- `greeting()`
+		- This method should take 0 parameters
+		- This method should **return**: `"Hello, my name is [First Name]"`
+	- `aboutMe()`
+		- This method should take 0 parameters
+		- This method should **return**: `"My full name is [your first and last name], I am [age] years old and I am a student at [school name]."`
+	- `askQuestion()`
+		- This method should take 1 parameter - `question`
+		- The question should be added to the students `questionList` property
+		- The students `hasQuestion` property should be changed to **true**
+		- The method should **return**: `"A question has been added to your list"`
+	- `answerQuestion()`
+		- This method should take 0 parameters
+		- Inside the method check if the student has a question or not by using the `hasQuestion` property
+			- If the student has a question
+				- reset the `hasQuestion` property to **false**
+				- **return** the **LAST** question in the `questionList` property
+			- If the student doesn't have a pending question
+				- **return**: `"You have no pending questions"`
+
+>##### Feature Set 2.2 - Test Your student
+
+>Using `console.log()` create output in your console from your methods in the following order:
+  - *Hint* - `console.log("Greeting function: ", student.greeting());`
+
+>1. greeting()
+1. aboutMe()
+1. answerQuestion()
+1. askQuestion()
+1. askQuestion()
+1. askQuestion()
+1. answerQuestion()
+1. Make sure to create a seperate `console.log` for each item on the list above and to follow that order.
+  1. Did you get the last question asked from `answerQuestion`
+  1. Log out your `questionList` to verify all three questions got added to the list
+
+>Save your work, refresh the page
+
+>Use the console to make sure everything works as expected.
+
+#### Quick `console.log()` exercise
+
+>1. In your console, type: `console.log("Here is my student object " + student);`
+1. Now try typing: `console.log("Here is my student object", student);`
+
+>Notice the difference, this is why using commas in your `console.log()` can be very useful.
 
 ## After Coding Details
 
@@ -84,7 +146,7 @@ Building from previous prototypes this prototype will introduce you to DOM creat
 
 > Run below command in terminal tab
 
-> `git commit -m "js_dom_creation - Eric Johnson"`
+> `git commit -m "js_ref_data_types - Eric Johnson"`
 > - Eric Johnson should be replaced with your First & Last name
 > - Grouping files with a message allows those changes to be seen by others as a specific version of the code
 
@@ -92,10 +154,10 @@ Building from previous prototypes this prototype will introduce you to DOM creat
 
 > Run below command in terminal tab
 
-> `git push origin js_dom_creation`
+> `git push origin js_ref_data_types`
 > - When running the code above, the Git application will send all commits (<b>groupings of saved files</b>) to the 
 remote location (<b>github.com/[your-user-name]/prototypes indicated by origin</b>), specifically to the feature 
-branch/group <b>js_dom_creation</b>
+branch/group <b>js_ref_data_types</b>
 
 ##### 4. See if your feature fits with what everyone else was working on (Pull Request)
 
@@ -123,7 +185,7 @@ branch/group <b>js_dom_creation</b>
 >  1. `head fork: [your_user_name]/prototypes`
 >    1. Here you will select the option that matches your username / prototypes
 >    1. If you can not locate an option that has your username / prototypes, contact an instructor
->  1. `compare: js_dom_creation`
+>  1. `compare: js_ref_data_types`
 >    1. Here you will locate the branch name (or feature name) you created at the beginning of the prototype
 >    1. This will usually be the same as the name of the prototype
 >  1. Github.com will let you know if the code can be merged automatically (without needing a manual merge)
@@ -136,7 +198,7 @@ instructors at start)
 
 > ####Step 4.4 Add details into the pull request
 > 1. Give the pull request a title, by default its the name of the last commit (package) message that was saved
->   1. If you set the commit message above you should get get <b>js_dom_creation - [you name first & last 
+>   1. If you set the commit message above you should get get <b>js_ref_data_types - [you name first & last 
 name]</b> already pre populated in the Title field
 > 1. <b>Don't assign a user.</b> (An Instructor will select who this gets assigned too)
 >   1. Further into the cohort we will have students learn to review pull requests
