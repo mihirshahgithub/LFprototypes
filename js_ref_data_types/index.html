@@ -5,13 +5,13 @@
     <title></title>
     <script>
     //Feature Set 1.0
-        var studentArray=["student1","student2","student3","student4","student5"];
+        var studentArray=["Rhett","Andrew","Aldo","David","Mihir"];
         console.log(studentArray[2]);
 
      //Feature Set 1.1
         console.log(studentArray);
         console.log(studentArray.length);
-        studentArray.push("student6","student7");
+        studentArray.push("Chris","Nicole");
         console.log(studentArray.length);
         console.log(studentArray);
 
@@ -20,21 +20,20 @@
         student.firstName="Mihir";
         student.lastName="Shah";
         student.age=29;
-        student.school="Learningfuze";
+        student.school="LearningFuze";
         student.questionList=[];
         student.hasQuestion=false;
 
 console.log(student);
     //Feature Set 2.1 and 2.2
-       var student_greeting= student.greeting=function(){
+       student.greeting=function(){
             return "Hello, my name is " + this.firstName;
         };
-       console.log(student_greeting);
 
-        var about_me=student.aboutMe=function(){
-            return "My full name is " + this.firstName + this.lastName + " , I am " + this.age + " years old and I am a student at " + this.school;
+        student.aboutMe=function(){
+            return "My full name is " + this.firstName + " "+ this.lastName + " , I am " + this.age + " years old and I am a student at " + this.school;
         };
-        console.log(about_me);
+
 
         student.askQuestion=function(question){
           this.questionList.push(question);
@@ -45,15 +44,20 @@ console.log(student);
         student.answerQuestion=function(){
             if(student.hasQuestion){
                 student.hasQuestion=false;
-                return this.questionList.lastIndexOf();
+                return this.questionList[this.questionList.length-1];
             } else{
                 return "You have no pending questions";
             }
         };
 
-
-
-
+    console.log("Greeting function: ", student.greeting());
+    console.log("About me function: ", student.aboutMe());
+    console.log("Answer question function: ", student.answerQuestion());
+    console.log("Ask question function: ", student.askQuestion("What is your favorite sport?"));
+    console.log("Ask question function: ", student.askQuestion("How many titles does Kobe have?"));
+    console.log("Ask question function: ", student.askQuestion("What is life?"));
+    console.log("Answer question function: ", student.answerQuestion());
+    console.log(student.questionList);
     </script>
 </head>
 <body>
