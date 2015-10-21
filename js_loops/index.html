@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS LOOPS PROTOTYPE</title>
+    <script>
+        var numbers = [ 1,2,3,4,5,6,7,8,9,10];
+        for(i=0;i<numbers.length;i++){
+            console.log(numbers[i]);
+        }
+
+        for(i=numbers.length;i>=0;i--){
+            console.log(numbers[i]);
+        }
+
+        var numbers = [ 1,2,3,4,5,6,7,8,9,10];
+        for(i=0;i,i<numbers.length;i+=2){
+            console.log(numbers[i]);
+        }
+
+        var mixedArray=[4,56,11,13,97,22,7,36,19,5,8,10];
+        for(i=0;i,i>=10;i+=2){
+            console.log(numbers[i]);
+        }
+
+        //Feature Set 1 #7. The output is no longer odd. Yes, we can fix it
+
+        //Feature Set 2 For in loop
+        var classRoom={desk1:'Stu', desk2:'Peggy',desk3:'Lonestar', desk4:'George',desk5:'Sheldon'}
+        var desk= "";
+
+        for(var desk in classRoom){
+            console.log(classRoom[desk] + " is at " + desk);
+        }
+
+        //Feature Set 3
+        var studentArray = [{name: "Bob", grade: 87},
+            {name: "Fred", grade: 82},
+            {name: "George", grade: 93},
+            {name: "Robert", grade: 85}]
+
+
+        function findStudent(name){
+            var output = '';
+            var i=0;
+
+            var found = false;
+            while (!found && i < studentArray.length) {
+                var student = studentArray[i];
+                if (student.name == name) {
+                    output = "Found " + name + " Grade: " + student.grade;
+                    found = true;
+                }
+                i++;
+            }
+            if (!found) {
+                output = "Student " + name + " not found.";
+            }
+            return output;
+        }
+        console.log("Test 1:", findStudent('George'));
+        console.log("Test 2:", findStudent('Fred'));
+        console.log("Test 3:", findStudent('Hank'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
