@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX CALL</title>
+</head>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+<script>
+    function inputFieldData() {
+
+        $.ajax({
+            dataType: "text",
+            data: {
+                howdy: $('input[type=checkbox]:checked').val(),
+                message: $('textarea').val(),
+            },
+            url: "http://localhost:8888/lfz/prototypes/php_superglobals/index.php",
+            method: "POST",
+            success: function(result){
+                console.log(result);
+            }
+        })
+    }
+</script>
+<body>
+<form>
+    <input type="checkbox" value="howdy">Howdy
+    <textarea name="message">Message</textarea>
+</form>
+<button type="button" onclick="inputFieldData()">Ajax Call</button>
+</body>
+</html>
+
+

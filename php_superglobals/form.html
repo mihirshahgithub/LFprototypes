@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feature Set 2: Form</title>
+</head>
+<body>
+<form action="index.php" method="get">
+    <input type="text" name="name" id="my_name" placeholder="NAME">
+    <br>
+    Gender:
+    <input type="radio" name="name" value="male">Male
+    <input type="radio" name="name" value="female">Female
+    <input type="radio" name="name" value="other">Other
+    <br>
+    <input type="text" name="fav_fruit[]" placeholder="favorite fruit">
+    <input type="text" name="fav_fruit[]" placeholder="favorite fruit">
+    <input type="text" name="fav_fruit[]" placeholder="favorite fruit">
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
+
+<!--When I use post, I don't receive any of the inputted values; however, on get, the array is populated with my responses.  -->
