@@ -14,7 +14,7 @@ $images = (glob("images/*"));
 <div class="container">
     <?php
     foreach ($images as $image) {
-        echo "<img src=" . $image . " />";
+//        echo "<img src=" . $image . " />";
     };
     ?>
 </div>
@@ -22,10 +22,12 @@ $images = (glob("images/*"));
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <?php
-        print ("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
-
-        for ($i = 1; $i < count($images); $i++) {
-            print("<li data-target='#myCarousel' data-slide-to='[$i]'></li>");
+        $active="active";
+        for($i=0; $i<count($images); $i++){
+            ?>
+            <li data-target="#myCarousel" data-slide-to="<?php print ($i); ?>" class= '<?php print($active);?>'></li>
+            <?php
+            $active='';
         }
         ?>
     </ol>
