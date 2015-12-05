@@ -9,6 +9,6 @@ if(mysqli_num_rows($result)>0){
     while($row=mysqli_fetch_assoc($result)){
         $output[]=$row;
     }
-    print_r($output)
+    print_r($output);
 }
 
