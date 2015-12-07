@@ -33,6 +33,7 @@ session_start();
             details = $('.details');
             id = $('.id');
             $('button').click(ajax);
+//            $('input[type=submit]').click(ajax);
         })
 
     </script>
@@ -45,8 +46,8 @@ session_start();
     <br>
     <input type="text" name="id" placeholder="ID" class="id">
     <br>
-    <button type="submit">Submit</button>
-    <!--    <input type="submit" value="SEND">-->
+    <button type="button">Submit</button>
+<!--        <input type="submit" value="SEND">-->
 </form>
 </body>
 </html>
