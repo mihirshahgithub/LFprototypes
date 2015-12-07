@@ -12,7 +12,7 @@ if(!empty($_POST)){
     $id=$_POST['id'];
     $title=$_POST['title'];
     $details=$_POST['details'];
-    $query="INSERT INTO `todo_items(FS2)`(`ID`, `TITLE`, `DETAILS`,) VALUES ('{$id}','{$title}','{$details}')";
+    $query="INSERT INTO `todo_items(FS2)`(`ID`, `TITLE`, `DETAILS`) VALUES ('{$id}','{$title}','{$details}')";
     mysqli_query($conn,$query);
 }
 ?>
